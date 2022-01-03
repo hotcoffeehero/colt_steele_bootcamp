@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb+srv://hotcoffeehero:mongo1234@proshop.qiu4a.mongodb.net/yelp-camp?retryWrites=true&w=majority"
+}

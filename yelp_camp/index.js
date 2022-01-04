@@ -4,13 +4,14 @@ const path = require('path')
 const mongoose = require('mongoose')
 const connectDB = require('./config/db')
 const methodOverride = require('method-override')
+const ejsMate = require('ejs-mate')
 const Campground = require('./models/campground')
 const campground = require('./models/campground')
 
 
 connectDB()
 
-
+app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 

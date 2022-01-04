@@ -1,0 +1,63 @@
+.h1 {
+    text-align: center;
+}
+
+/* .master-container {
+    margin: 16px
+} */
+
+.form-box {
+    /* display: flex;
+    flex-direction: column; */
+    width: fit-content;
+    margin: auto;
+    border: 1px black solid;
+    padding: 24px;
+    margin-bottom: 16px;
+    
+}
+
+.form-box-2 {
+    /* display: flex;
+    flex-direction: column; */
+    width: fit-content;
+    margin: auto;
+    border: 1px black solid;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.form-box-3 {
+    /* display: flex;
+    flex-direction: column; */
+    width: fit-content;
+    margin: auto;
+    border: 1px black solid;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+
+
+/* input, label {
+    display: flex;
+    flex-direction: column;
+} */
+
+label {
+    padding-bottom: 2px;
+}
+
+
+.form-element {
+    padding: 6px;
+    /* 
+    These properties will override the above styling of input and label because form-element is the parent element. 
+     display: flex;
+    justify-content: center; */
+}
+
+#web-search {
+    padding-bottom: 4px;
+}
+

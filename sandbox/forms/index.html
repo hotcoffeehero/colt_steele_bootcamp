@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>All About Forms</title>
+</head>
+<body>
+    <h1 class="h1">Forms</h1>
+    <hr>
+    <div class="master-container">
+<!--  - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <div class="form-box">
+        <form action="">
+
+            <div class="form-element">
+                <label for="username">Username:</label>
+                <input id="username" type="text" name="username">
+            </div>
+
+            <div class="form-element">
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="password">
+            </div>
+
+            <div class="form-element">
+                <label for="color">Choose a Color:</label>
+                <input id="color" type="color" name="color">
+            </div>
+
+            <div class="form-element">
+                <label for="number">Pick a Number:</label>
+                <input id="number" type="number" name="number">
+            </div>
+            <!-- <div class="form-element">
+                <p>Do you smoke?</p>
+                <input id="smoking" type="radio" name="yes_smoking">
+                <label for=smoking>Yes</label>
+                <input id="smoking" type="radio" name="no_smoking">
+                <label for=smoking>No</label>
+            </div> -->
+            <button id="form-submit">Submit</button>
+        </form>
+    </div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <div class="form-box-2">
+        <!-- Search the web -->
+        <h1>Search the Web</h1>
+        <p>
+            <form action="https://www.reddit.com/search">
+                <h3>Search Reddit</h3>
+                <input type="text" name="q" id="web-search">
+                <button>Go!</button>
+            </form>
+        </p>
+        <p>
+            <form action="https://www.google.com/search">
+                <h3>Search Google</h3>
+                <input type="text" name="q" id="web-search">
+                <button>Go!</button>
+            </form>
+        </p>
+        
+        <p>
+            <form action="https://www.youtube.com/search">
+                <h3>Search Youtube</h3>
+                <input type="text" name="search_query" id="web-search">
+                <button>Go!</button>
+            </form>
+        </p>
+        
+        <form action="/">
+            <!-- Checkbox: Tech Skills  -->
+            <p>
+            <p>Check all that apply:</p>
+                <input type="checkbox" name="html" id="html" value='yes'>
+                <label for="html">HTML</label><br>
+
+                <input type="checkbox" name="css" id="css" value="yes">
+                <label for="css">CSS</label><br>
+
+                <input type="checkbox" name="js" id="js" value="yes">
+                <label for="js">JavaScript</label>
+            </p>
+            <!-- Buttons: Smoking Radio  -->
+            <p>
+            <p>Do you smoke?</p>
+                <input type="radio" name="smoking" id="yes" value="yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" name="smoking" id="no" value="no">
+                <label for="no">No</label>
+            </p>
+            <!-- Select Menu: Visa Type  -->
+            <p>
+                <label for="visa-type">Visa Type:</label>
+                <Select name="visa-type" id="visa-type">
+                    <option value="empty">Please Select</option>
+                    <option value="sih">Specialist in Humanities</option>
+                    <option value="instructor">Instructor</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="spousal">Spouse of National</option>
+                    <option value="perm-res">Permanent Resident</option>
+                </Select>
+            </p>
+            <!-- Range: Satisfaction with Life -->
+            <p>
+                <h3>Satisfaction with life</h3>
+                <label for="happiness">1-10: </label>
+                <input type="range" name="happiness" id="happiness" min="1" max="10">
+            </p>
+            <!-- Textarea: Bio -->
+            <p>
+                <h3>Bio</h3>
+                <p>Tell us about yourself:</p>
+                <label for="bio"></label>
+                <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+            </p>
+            <button>Submit</button>
+        </form>
+    </div>
+<!-- - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - - -  -->
+    <div class="form-box-3">
+        <h1>Validation Demo</h1>
+        <form action="/dummy">
+            <p>
+                <label for="first-name">First Name: </label>
+                <input type="text" name="first-name" id="first-name" required>
+            </p>
+            <p>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="username" minlength="6" maxlength="10" required>
+                
+            </p>
+            
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -37,10 +37,15 @@ app.get('/campgrounds/new', (req, res) => {
 })
 
 //The post request to add a new campground
-app.post('/campgrounds', async (req, res) => {
-    const campground = new Campground(req.body.campground)
-    await campground.save()
-    res.redirect(`/campgrounds/${campground._id}`)
+app.post('/campgrounds', async (req, res, next) => {
+    try {
+        const campground = new Campground(req.body.campground)
+        await campground.save()
+        res.redirect(`/campgrounds/${campground._id}`)
+    } catch (e) {
+        next(e)
+    }
+    
 })
 
 //View an individual campground by clicking on the link
@@ -69,17 +74,9 @@ app.delete('/campgrounds/:id', async (req, res) => {
     res.redirect('/campgrounds')
 })
 
-
-
-// app.get('/makecampground', async (req, res) =>{
-//     const camp = new Campground({
-//         title: "Greenleaf", 
-//         description: "Family-friendly camping at the edge of the Arkansas River."
-//     })
-//     await camp.save()
-//     res.send(camp)
-// })
-
+app.use((err, req, res, next) => {
+    res.send('Awww shucks. Something went wrong...')
+})
 
 app.listen(3000, () => {
     console.log('App is a go on 3000.')
